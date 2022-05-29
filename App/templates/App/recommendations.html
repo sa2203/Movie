@@ -1,0 +1,28 @@
+<!--base html page is extended here-->
+{% extends "App/base.html" %}
+{% block body %}
+<div class="container">
+    <!-- prints the text-->
+    <h1></h1>
+    {% for x in related %}
+    <span class="badge rounded-pill bg-primary">{{x.title}}</span>
+    {% endfor %}
+
+    <div class="container">
+      <div class="row">
+        {% for x in recom %}
+         <div class="col-3">
+           <div class="card">
+             <img src="{{x.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{x.title}}</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary">WATCH MOVIE</a>
+                </div>
+           </div>
+         </div>
+        {% endfor  %}
+      </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "App/base.html" %}
+{% block body %}
+ <!-- cards for the display of recommendation-->
+<div class="container" >
+     <div class="row height d-flex justify-content-center align-items-center">
+         <div class="col-md-8">
+             <h1>Movie Recommendation System</h1>
+             <div class="search">
+                 <i class="fa fa-search"></i>
+                 <form method="post">{% csrf_token %}
+                     <input type="text" class="form-control" name="movie" placeholder="Similar Movie? Ask Now">
+                          <button class="btn btn-primary" type="submit">Search</button>
+                 </form>
+
+             </div>
+         </div>
+     </div>
+
+</div>
+{% endblock %}
